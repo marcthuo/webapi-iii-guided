@@ -2,9 +2,6 @@ const express = require('express'); // importing a CommonJS module
 const helmet = require('helmet');
 const morgan = require('morgan');
 
-
-
-
 const hubsRouter = require('./hubs/hubs-router.js');
 
 const server = express();
@@ -14,7 +11,7 @@ server.use(helmet());
 server.use(morgan('dev'));
 
 server.use(teamNamer);
-// server.use(moodyGateKeeper);)
+// server.use(moodyGateKeeper);
 
 // server.use((req, res) => {
 //   res.status(500).send("Ain't nobody got time for that!")
